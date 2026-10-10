@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Internships</title>
+</head>
+
+<body>
+
+    <h1>Available Internships</h1>
+       {% for internship in internships %}
+    <div>
+        <h2>{{ internship ["title"] }}</h2>
+        <p>Company: {{ internship["company"]}}</p>
+        <p>Required Skills: {{ internship["description"]}}</p>
+
+        <button>View Details</button>
+    </div>
+
+    <hr>
+
+   {% endfor %}
+</body>
+
+</html>

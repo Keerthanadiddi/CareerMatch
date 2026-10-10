@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Matcher | Find Your Future</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <span class="logo-icon">✦</span>
+            Internship Matcher
+        </a>
+
+        <div class="nav-links">
+            <a href="/" class="active">Home</a>
+            <a href="/profile">My Profile</a>
+            <a href="/skills">My Skills</a>
+            <a href="/internships">Internships</a>
+        </div>
+
+        <a href="/profile" class="nav-button">Get Started ↗</a>
+    </nav>
+
+    <!-- Hero section -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">
+                    ✨ YOUR CAREER JOURNEY STARTS HERE
+                </span>
+
+                <h1>
+                    Your skills.<br>
+                    Your future.<br>
+                    Your next <span>opportunity.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover internships that match your skills,
+                    explore what employers need, and take your
+                    next career step with confidence.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="/internships" class="btn btn-primary">
+                        Explore Internships <span>→</span>
+                    </a>
+
+                    <a href="/profile" class="btn btn-secondary">
+                        Build My Profile
+                    </a>
+                </div>
+
+                <div class="trust-note">
+                    <span class="trust-icon">✓</span>
+                    Your journey to the right opportunity starts here.
+                </div>
+            </div>
+
+            <!-- Internship preview illustration -->
+            <div class="hero-visual">
+                <div class="decor decor-one"></div>
+                <div class="decor decor-two"></div>
+
+                <div class="visual-label">YOUR MATCH PREVIEW</div>
+
+                <div class="internship-card">
+                    <div class="company-icon purple">▥</div>
+
+                    <div class="internship-info">
+                        <h3>Data Analyst Intern</h3>
+                        <p>Tech & Analytics</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Data</span>
+                        </div>
+                    </div>
+
+                    <div class="match-score">
+                        <div class="score-circle">92%</div>
+                        <small>Match score</small>
+                    </div>
+                </div>
+
+                <div class="internship-card second-card">
+                    <div class="company-icon green">&lt;/&gt;</div>
+
+                    <div class="internship-info">
+                        <h3>Python Developer</h3>
+                        <p>Innovative Solutions</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="match-score">
+                        <div class="score-circle score-blue">84%</div>
+                        <small>Match score</small>
+                    </div>
+                </div>
+
+                <div class="visual-footer">
+                    <span>✦</span> Discover opportunities for your skills
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <article class="feature">
+                <div class="feature-icon mint">◎</div>
+                <div>
+                    <h3>Smart Skill Matching</h3>
+                    <p>Find opportunities aligned with your skills and goals.</p>
+                </div>
+            </article>
+
+            <article class="feature">
+                <div class="feature-icon lavender">↗</div>
+                <div>
+                    <h3>Identify Skill Gaps</h3>
+                    <p>Discover which skills you can learn next.</p>
+                </div>
+            </article>
+
+            <article class="feature">
+                <div class="feature-icon mint">♧</div>
+                <div>
+                    <h3>Career Opportunities</h3>
+                    <p>Explore internships and move towards your goals.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- How it works -->
+        <section class="how-section">
+            <div class="section-heading">
+                <span class="eyebrow">SIMPLE. SMART. PERSONALIZED.</span>
+                <h2>A smarter way to find your fit</h2>
+                <p>Three simple steps to start your internship journey.</p>
+            </div>
+
+            <div class="steps">
+                <a href="/profile" class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">♙</div>
+                    <h3>Create Your Profile</h3>
+                    <p>Add your name, email, and college details.</p>
+                    <span class="step-link">Create profile →</span>
+                </a>
+
+                <a href="/skills" class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">✳</div>
+                    <h3>Add Your Skills</h3>
+                    <p>Showcase your technical skills and interests.</p>
+                    <span class="step-link">Add skills →</span>
+                </a>
+
+                <a href="/internships" class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">⌕</div>
+                    <h3>Explore Internships</h3>
+                    <p>Browse opportunities that interest you.</p>
+                    <span class="step-link">Find internships →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Final call to action -->
+        <section class="cta-section">
+            <div>
+                <span class="eyebrow">YOUR NEXT CHAPTER STARTS NOW</span>
+                <h2>Ready to turn your skills into opportunities?</h2>
+                <p>Take the first step towards your career today.</p>
+            </div>
+            <a href="/profile" class="btn btn-light">
+                Get Started Now →
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <a href="/" class="footer-logo">✦ Internship Matcher</a>
+        <p>Built to connect your skills with your future.</p>
+    </footer>
+
+</body>
+</html>
