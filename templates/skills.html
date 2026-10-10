@@ -1,29 +1,56 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>My Skills</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills | Internship Matcher</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 <body>
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <span class="logo-icon">✦</span>
+            Internship Matcher
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/profile">My Profile</a>
+            <a href="/skills" class="active">My Skills</a>
+            <a href="/internships">Internships</a>
+        </div>
+    </nav>
 
-    <h1>My Skills</h1>
+    <main class="how-section">
+        <div class="section-heading">
+            <span class="eyebrow">SHOWCASE YOUR STRENGTHS</span>
+            <h2>Build your skill profile</h2>
+            <p>Add a skill you know to help find suitable internships.</p>
+        </div>
 
-    <p>Add the skills you currently know.</p>
+        <form method="POST" action="/skills"
+              style="max-width: 550px; margin: auto; background: white; padding: 30px; border-radius: 22px;">
 
-    <input type="text" placeholder="Enter a skill">
+            <label for="name">Technical skill</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="e.g. Python"
+                required
+                style="width: 100%; padding: 14px; margin: 12px 0 20px; border: 1px solid lavender; border-radius: 12px;"
+            >
 
-    <button>Add Skill</button>
+            <button type="submit" class="btn btn-primary"
+                    style="border: none; cursor: pointer; width: 100%;">
+                Save Skill →
+            </button>
+        </form>
 
-    <h2>My Current Skills</h2>
-
-    <ul>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>NumPy</li>
-        <li>Pandas</li>
-    </ul>
-
+        <p style="text-align: center; margin-top: 25px;">
+            <a href="/" class="step-link">← Back to Home</a>
+        </p>
+    </main>
 </body>
-
 </html>

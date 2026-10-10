@@ -1,3 +1,4 @@
+from os import name
 import sqlite3
 from webbrowser import get
 
@@ -95,9 +96,34 @@ def profile():
        conn.close()
        return """<h2>Profile saved Successfully!</h2><a href='/profile'>Add another profile</a>"""
    return render_template("profile.html")
-@app.route("/skills")
+
+@app.route("/skills", methods=["GET", "POST"])
 def skills():
-   return render_template("skills.html");
+    if request.method == "POST":
+        name = request.form["name"].strip()
+
+        if not name:
+            return "Please enter a skill."
+
+        conn = get_db_connection()
+
+        conn.execute(
+            "INSERT INTO skills (name) VALUES (?)",
+            (name,)
+        )
+
+        conn.commit()
+        conn.close()
+
+        return """
+            <h2>Skill saved successfully!</h2>
+            <a href="/skills">Add another skill</a> |
+            <a href="/">Home</a>
+        """
+
+    return render_template("skills.html")
+
+
 @app.route("/match")
 def match():
    return render_template("match.html");
